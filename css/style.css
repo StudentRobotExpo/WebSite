@@ -12,20 +12,28 @@ p{
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 600;
 }
-h3{
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 600;
-}
 li{
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 600;
 }
+.expodatemenu{
+  color: black;
+  text-decoration: none;/*下線消す*/
+  margin: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 100px; 
+}
+.expofesdate{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
 
-
-.kaiyofesdate h1{
+.expofesdate h1{
   margin-top: 100px;
 }
-.kaiyofesdate a{
+.expofesdate a{
   font-size: 20px;
 }
 
@@ -197,6 +205,326 @@ header p{
   justify-content: center;
   text-align: center;
 }
+
+
+.infomations{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;/*下線消す*/
+  margin: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.infomations p{
+  font-size: 20px;
+}
+.underline_black{
+  border-bottom: 2px solid rgba(100, 100, 100, 0.7);
+}
+.underline_Blue{
+  border-bottom: 2px solid rgb(54, 56, 138);
+  border-image: linear-gradient(to right, #468376 0%, #4400ff 100%);
+  border-image-slice: 1;
+}
+.infomationselement{
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.infomationsmenu{
+  margin-top: 20px;
+}
+
+.infomationsmenu h2{
+  margin-left: 15%;
+}
+
+.imagedayo {
+	position: relative;
+	max-width: 100%;
+	height: 600px;
+}
+
+.headpicture {
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+  height: 600px;
+  object-fit: cover;
+	animation: change-img-anim 30s infinite;
+}
+
+.headpicture:nth-of-type(1) {
+	animation-delay: 0s;
+}
+.headpicture:nth-of-type(2) {
+	animation-delay: 10s;
+}
+.headpicture:nth-of-type(3) {
+	animation-delay: 20s;
+}
+
+@keyframes change-img-anim {
+  0%{ opacity: 0;}
+  30%{ opacity: 1;}
+  36%{ opacity: 1;}
+  45%{ opacity: 0;}
+  100%{ opacity: 0;}
+}
+
+.introduction{
+  margin-top: 100px;
+}
+.introduction h1{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.introduction h4{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.detail{
+  font-size: 15px;
+  color: black;
+}
+.engekicontents h6{
+  font-size: 30px;
+}
+.border_radius{
+  margin-top: 7px;
+  margin-left: 14%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10021px;
+  background: linear-gradient(120deg, rgba(250, 150, 20, 1) 0%, rgba(250, 220, 0, 1) 100%);
+}
+
+.aboutcovid19{
+  display: flex;
+  margin: 0;
+}
+.aboutcovid19 h3{
+  margin-left: 1%;
+  font-size: 25px;
+}
+.detail_inpoinfo{
+  font-size: 20px;
+  color: black;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;/*下線消す*/
+  margin: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.floorpicture{
+  object-fit: cover;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.classcontentsgrid{
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.stagegrid{
+  display: grid;
+  gap: 15px;
+  margin-top: 6%;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.classcontents{
+  width: 300px;
+  height: auto;
+  justify-content: center;
+  border-radius: 20px;
+}
+.classcontents h6{
+  margin-top: 0;
+  font-size: 25px;
+  color: black;
+}
+.classcontents p{
+  margin-bottom: 4px;
+  color: black;
+}
+.classcontentspicture{
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+}
+.classcontents_detail{
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.syoukai{
+  font-size: 20px;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;/*下線消す*/
+  margin: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.syoukai p{
+  display: flex;
+}
+.syoukai h6{
+  font-size: 30px;
+}
+
+.stagecontents{
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  height: auto;
+  justify-content: center;
+  border-radius: 20px;
+}
+.stagecontents p{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.stagecontents h3{
+  font-size: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.stagecontentspicture{
+  width: auto;
+  height: 300px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 18px;
+}
+
+.engekigrid{
+  display: grid;
+  gap: 15px;
+  margin-top: 6%;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.engekicontents{
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  height: auto;
+  justify-content: center;
+}
+.engekicontents p{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.engekicontents h3{
+  font-size: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.engekicontentspicture{
+  width: 50%;
+  min-width: 265px;
+  height: auto;
+  justify-content: center;
+  float: right;
+  margin-bottom: 3px;
+}
+
+.buspicture{
+  margin-top: 20px;
+  object-fit: cover;
+  width: 70%;
+  height: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.Lunch_menu{
+  margin-top: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.Lunch_menu div{
+  font-size: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.Lunch_menu h3{
+  font-size: 100px;
+}
+
+@media (max-width:950px){
+  .stagecontentspicture{
+    width: 100%;
+    height:auto;
+    margin-bottom: 0;
+  }
+  .engekicontentspicture{
+    width: 100%;
+    height:auto;
+    margin-bottom: 0;
+  }
+}
+
+.engeki{
+  margin: 5px;
+  border: solid 1px black;
+}
+
+.eigyouzikan{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.menuelement{
+  color: black;
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;/*下線消す*/
+  font-family: 'Avenir','Arial';/*フォントをいい感じに*/
+}
+
+.latestinfo{
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
 .news{
   font-size: 20px;
   text-decoration: none;
@@ -219,7 +547,7 @@ footer{
   padding: 10px 0;
 }
 
-footer p{
+p{
   font-size: 1rem;
 }
 
@@ -233,4 +561,11 @@ footer p{
 .pageelement h3{
     font-size: 30px;
     margin-bottom: 20px;
+}
+
+.expofesdate h1{
+  margin-top: 100px;
+}
+.expofesdate a{
+  font-size: 20px;
 }
