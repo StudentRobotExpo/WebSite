@@ -248,14 +248,14 @@ header p{
 .imagedayo {
 	position: relative;
 	max-width: 100%;
-	height: 600px;
+	height: 700px;
 }
 
 .headpicture {
 	position: absolute;
 	width: 100%;
 	opacity: 0;
-  height: 600px;
+  height: 700px;
   object-fit: cover;
 	animation: change-img-anim 30s infinite;
 }
