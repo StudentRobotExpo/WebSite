@@ -270,6 +270,53 @@ header p{
 	animation-delay: 20s;
 }
 
+/* 追加: 画像上に重ねるテキスト用のスタイル */
+.expodatemenu-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.expodatemenu-overlay h1 {
+  margin: 0 0 20px 0;
+  font-size: 48px;
+  color: #333;
+}
+
+.expodatemenu-overlay .underline_Blue {
+  margin: 0 auto 20px;
+  width: 200px;
+  height: 3px;
+}
+
+.expodatemenu-overlay a {
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .expodatemenu-overlay {
+    padding: 30px 40px;
+  }
+  
+  .expodatemenu-overlay h1 {
+    font-size: 32px;
+  }
+  
+  .expodatemenu-overlay a {
+    font-size: 20px;
+  }
+}
+
 @keyframes change-img-anim {
   0%{ opacity: 0;}
   30%{ opacity: 1;}
