@@ -1,56 +1,80 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title>スケジュール - 学生ロボットEXPO</title>
-    <!-- 互換性のために ico も指定(どちらか存在する方を使用) -->
-    <link rel="icon" href="../favicon.icon" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="Discription" content="学生がロボットします">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-</head>
-<body>
-    <header class="page-header">
-        <a class="icon_header" href="../index.html">
-            <p>STUDENT ROBOT EXPO</p>
-            <h6>学生ロボットEXPO</h6>
-        </a>
-        <div class="menu">
-            <a class="menuelement" href="schedule.html">スケジュール</a>
-            <a class="menuelement" href="openinfo.html">開催概要</a>
-            <a class="menuelement" href="joingroup.html">参加団体</a>
-            <a class="menuelement" href="map.html">会場MAP</a>
-        </div>
-        <div class="hamburger-menu">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
-            <div class="menu-content">
-                <ul>
-                    <li><a class="menuelement" href="schedule.html">スケジュール</a></li>
-                    <li><a class="menuelement" href="openinfo.html">開催概要</a></li>
-                    <li><a class="menuelement" href="joingroup.html">参加団体</a></li>
-                    <li><a class="menuelement" href="map.html">会場MAP</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<html lang = "ja">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "description" content = "学生主体のロボット交流会のホームページです。">
+		<title>スケジュール | 学生ロボットEXPO</title>
+		<link rel = "icon" href = "../images/icon.ico" type = "image/x-icon">
+		<link rel = "stylesheet" href = "../style.css">
+	</head>
 
-    <div class="introduction">
-        <h1 class="underline_Blue openinfo-title">スケジュール</h1>
+	<body>
+		<header>
+			<a href = "../index.html">
+				<img class = "logo-header" src = "../images/logo_light.png" alt = "学生ロボットEXPO">
+			</a>
 
-        <div style="padding: 200px 20px; text-align: center;">
-            <div>
-                <h1>Coming Soon</h1>
-            </div>
+			<div class = "text-menu">
+				<a href = "outline.html">開催概要</a>
+				<a href = "participants.html">参加団体</a>
+				<a href = "schedule.html">スケジュール</a>
+				<a href = "map.html">会場MAP</a>
+				<a href = "access.html">アクセス</a>
+			</div>
+
+			<div class = "hamburger-menu">
+				<input type = "checkbox" id = "menu-toggle" hidden>
+				<label class = "menu-icon" for = "menu-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+
+				<div class="overlay" onclick="document.getElementById('menu-toggle').checked = false;"></div>
+
+				<div class = "content">
+					<ul>
+						<li><a href = "outline.html">開催概要</a></li>
+						<li><a href = "participants.html">参加団体</a></li>
+						<li><a href = "schedule.html">スケジュール</a></li>
+						<li><a href = "map.html">会場MAP</a></li>
+						<li><a href = "access.html">アクセス</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+    <div class="page-title">スケジュール</div>
+
+    <div style="padding: 200px 20px; text-align: center;">
+        <div>
+            <h1>Coming Soon</h1>
         </div>
     </div>
 
     <footer>
-        <div>
-            <p><small>&copy; 2026 学生ロボットEXPO</small></p>
+      <div class="content">
+        <div class="social-links">
+          <a href="https://x.com/robot_expo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/your_account" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://line.me/R/ti/p/@398zjudv" target="_blank" rel="noopener noreferrer" aria-label="LINE">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+            </svg>
+          </a>
         </div>
+      </div>
+      <p><small>&copy; 2026 学生ロボットEXPO</small></p>
     </footer>
-</body>
+  </body>
 </html>

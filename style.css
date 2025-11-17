@@ -1,0 +1,490 @@
+/* 全体 */
+
+@charset "utf-8";
+
+body {
+  background-color : #ffffff;
+}
+
+header {
+  background-color : #ffffff;
+  height : 120px;
+  display : flex;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #40CCED, #C8E01E);
+  border-image-slice: 1;
+}
+
+footer {
+  margin-top: 50px;
+  background: gray;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-links a {
+  color: white;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+}
+
+/* ロゴ */
+
+.logo-header {
+  height : 100px;
+  margin : 10px;
+}
+
+
+
+/* メニュー */
+
+.text-menu {
+  background-color : #ffffff;
+  margin : 20px 20px;
+  margin-left : auto;
+  font-size : 24px;
+  display : flex;
+  align-items : flex-end;
+}
+
+@media (max-width:1000px){
+  .text-menu{
+    display: none;
+  }
+}
+@media (min-width :1001px){
+  .hamburger-menu{
+    display: none;
+  }
+}
+
+.text-menu a {
+  color : #000000;
+  margin : 5px 20px;
+  text-decoration : none;
+}
+
+.text-menu a:hover {
+  color : #007bff;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+  display: inline-block;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background: #000000;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+#menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu .content {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#menu-toggle:checked ~ .content {
+  right: 0;
+}
+
+.hamburger-menu .content ul {
+  list-style: none;
+  padding: 60px 20px;
+}
+
+.hamburger-menu .content ul li {
+  margin: 20px 0;
+}
+
+.hamburger-menu .content a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+}
+
+.hamburger-menu .content a:hover {
+  color : #007bff;
+}
+
+
+
+/* メイン */
+/* スライド画像 */
+
+.top-image {
+  position: relative;
+  top : 10px;
+  width: 100%;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+
+.top-image .picture {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 120px);
+  object-fit: cover;
+  opacity: 0;
+  animation: change-img-anim 15s infinite;
+}
+
+.top-image .picture:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.top-image .picture:nth-of-type(2) {
+  animation-delay: 5s;
+}
+.top-image .picture:nth-of-type(3) {
+  animation-delay: 10s;
+}
+
+@keyframes change-img-anim {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  33.33% { opacity: 1; }
+  38.33% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* 情報 */
+
+.card {
+  position: absolute;
+  top: 60%;
+  right: 80px;
+  height : 60%;
+  width : 20%;
+  min-width : 300px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+}
+
+.card .logo-container {
+  margin : 30px 0;
+  text-align: center;
+}
+
+.card .logo {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 200px;
+}
+
+.card .divider {
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #40CCED, #C8E01E);
+  margin: 30px auto;
+}
+
+.card .info {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.card .info-label {
+  margin : 20px 0 10px 0;
+  color: #FFFFFF;
+  font-size: clamp(12px, 1vw, 24px);
+}
+
+.card .info-content {
+  color: #FFFFFF;
+  font-size: clamp(18px, 1.5vw, 36px);
+  font-weight: 700;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-access {
+  font-size: clamp(10px, 0.8vw, 20px);
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ページタイトル */
+
+.page-title {
+  margin : 80px 200px 40px 200px;
+  padding-bottom : 20px;
+  border-bottom : 3px solid transparent;
+  border-image : linear-gradient(to right, #40CCED, #C8E01E);
+  border-image-slice : 1;
+
+  font-size : 48px;
+  text-align : center;
+}
+
+/* 開催概要 */
+
+.outline {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 50px;
+}
+
+.outline .intro {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.intro .title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #40CCED, #C8E01E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro .text {
+  font-size: clamp(16px, 2vw, 18px);
+  color: #000000;
+  line-height: 1.8;
+}
+
+.outline .context {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.outline .context::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, #40CCED, #C8E01E);
+}
+
+.context .heading {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.context .list {
+  list-style: none;
+  padding: 0;
+}
+
+.context .list li {
+  font-size: clamp(16px, 2vw, 18px);
+  color: #555;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, rgba(64, 204, 237, 0.1), rgba(200, 224, 30, 0.1));
+  border-radius: 8px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.context .list li::before {
+  content: "✓";
+  position: absolute;
+  left: 15px;
+  color: #40CCED;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.welcome {
+  background: linear-gradient(135deg, #40CCED, #C8E01E);
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 2px 4px 24px rgba(64, 204, 237, 0.3);
+}
+
+.welcome .title {
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.welcome .text {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .outline-container {
+    padding: 0 15px;
+  }
+
+  .outline-section {
+    padding: 30px 20px;
+  }
+
+  .outline-welcome {
+    padding: 40px 20px;
+  }
+
+  .page-title {
+    margin: 80px 20px 40px 20px;
+  }
+}
+
+/* アクセスページ */
+
+.access {
+  max-width: 1000px;
+  margin: 0  auto;
+  padding: 20px 50px;
+}
+
+.access .info {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
+  max-width : 600px;
+  margin : 0 auto 60px auto;
+}
+
+.access .venue {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #40CCED, #C8E01E);
+  border-image-slice: 1;
+}
+
+.venue .name {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.venue .address {
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #555;
+}
+
+.transportation {
+  max-width : 400px;
+  margin : 0 auto;
+  display : flex;
+  flex-direction : column;
+  gap : 0;
+}
+
+.station {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.station:last-child {
+  border-bottom: none;
+}
+
+.station .name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.station .time {
+  font-size: 16px;
+  color: #000000;
+}
+
+.access .map {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+}
