@@ -269,9 +269,6 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.card .logo-container {
   text-align: center;
 }
 
@@ -292,7 +289,6 @@ footer p {
 
 .card .card-info {
   margin: 30px 0;
-  text-align: center;
 }
 
 .card .info-label {
@@ -306,12 +302,14 @@ footer p {
   font-size: clamp(18px, 1.5vw, 36px);
   font-weight: 700;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: left;
 }
 
 .card-access {
   font-size: clamp(10px, 0.8vw, 20px);
   margin-top: 5px;
   color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 
 /* ページタイトル */
