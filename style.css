@@ -123,13 +123,13 @@ footer p {
   align-items: flex-end;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .text-menu {
     display: none;
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1401px) {
   .hamburger-menu {
     display: none;
   }
