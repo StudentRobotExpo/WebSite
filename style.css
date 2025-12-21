@@ -435,6 +435,15 @@ footer p {
   font-size: 20px;
 }
 
+/* チェック無しリスト（開催概要以外で使用） */
+.context .list.no-check li {
+  padding: 15px 20px;
+}
+
+.context .list.no-check li::before {
+  content: none;
+}
+
 .welcome {
   background: var(--gradient-diagonal);
   border-radius: 16px;
