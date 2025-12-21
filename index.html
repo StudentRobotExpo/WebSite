@@ -16,7 +16,7 @@
 			</a>
 
 			<div class = "text-menu">
-				<a href = "html/outline.html">開催概要</a>
+				<a href = "#outline">開催概要</a>
 				<a href = "html/participants.html">参加団体</a>
 				<a href = "html/schedule.html">スケジュール</a>
 				<a href = "html/guide.html">参加ガイド</a>
@@ -37,7 +37,7 @@
 
 				<div class="menu-content">
 					<ul>
-						<li><a href = "html/outline.html">開催概要</a></li>
+						<li><a href = "#outline">開催概要</a></li>
 						<li><a href = "html/participants.html">参加団体</a></li>
 						<li><a href = "html/schedule.html">スケジュール</a></li>
 						<li><a href = "html/guide.html">参加ガイド</a></li>
@@ -74,6 +74,38 @@
 			</div>
 		</div>
 
+		<div class="page-title" id="outline">開催概要</div>
+
+		<div class="outline">
+			<section class="intro">
+				<div class="title">学生が開発したロボットが集う展示・交流イベント</div>
+				<p class="text">技術とアイデアを持ち寄り学び合う、学生主体で開催するロボット展示・交流イベントです。</p>
+			</section>
+
+			<section class="context">
+				<div class="heading">未来のエンジニアを刺激する体験</div>
+				<ul class="list">
+					<li>ロボットを間近で見て触れるリアルな体験</li>
+					<li>開発者本人から直接聞くリアルな技術談</li>
+					<li>ものづくりへの意欲を高めるきっかけに</li>
+				</ul>
+			</section>
+
+			<section class="context">
+				<div class="heading">学生開発者の交流の促進</div>
+				<ul class="list">
+					<li>他チームの技術や工夫からの学び</li>
+					<li>来場者の反応を通じたフィードバック</li>
+					<li>新しいつながりや人脈の形成</li>
+				</ul>
+			</section>
+
+			<section class="welcome">
+				<div class="title">ロボットに興味があるすべての人へ</div>
+				<p class="text">あなたの好奇心が自然と広がる開かれた交流の場です<br>あなたの"知りたい"を胸にぜひご来場ください</p>
+			</section>
+		</div>
+
 
     <footer>
       <div class="footer-content">
@@ -102,5 +134,19 @@
       </div>
       <p><small>&copy; 2026 学生ロボットEXPO</small></p>
     </footer>
+
+	<script>
+		(function () {
+			const menuToggle = document.getElementById('menu-toggle');
+			if (!menuToggle) return;
+
+			const anchorLinks = document.querySelectorAll('a[href^="#"]');
+			anchorLinks.forEach((link) => {
+				link.addEventListener('click', () => {
+					menuToggle.checked = false;
+				});
+			});
+		})();
+	</script>
 	</body>
 </html>

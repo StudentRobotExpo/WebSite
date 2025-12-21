@@ -33,6 +33,16 @@
 }
 
 /* 全体 */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background-color: var(--color-white);
   margin: 0;
@@ -47,6 +57,10 @@ header {
   border-bottom: var(--border-gradient-width) solid transparent;
   border-image: var(--gradient-horizontal);
   border-image-slice: 1;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 footer {
@@ -138,7 +152,7 @@ footer p {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 3;
+  z-index: 30;
   display: inline-block;
 }
 
@@ -170,7 +184,7 @@ footer p {
   opacity: 0;
   pointer-events: none;
   transition: 0.4s;
-  z-index: 1;
+  z-index: 15;
 }
 
 #menu-toggle:checked ~ .overlay {
@@ -186,7 +200,7 @@ footer p {
   height: 100%;
   background: var(--color-white);
   transition: 0.4s;
-  z-index: 2;
+  z-index: 20;
 }
 
 #menu-toggle:checked ~ .menu-content {
@@ -316,6 +330,17 @@ footer p {
 /* ページタイトル */
 .page-title {
   margin: var(--spacing-page-top) var(--spacing-page-horizontal) var(--spacing-page-bottom) var(--spacing-page-horizontal);
+  padding-bottom: 20px;
+  border-bottom: var(--border-gradient-width) solid transparent;
+  border-image: var(--gradient-horizontal);
+  border-image-slice: 1;
+  font-size: 48px;
+  text-align: center;
+}
+
+.page-subtitle {
+  margin: var(--spacing-page-top) var(--spacing-page-horizontal) var(--spacing-page-bottom) var(--spacing-page-horizontal);
+  padding-top: 200px;
   padding-bottom: 20px;
   border-bottom: var(--border-gradient-width) solid transparent;
   border-image: var(--gradient-horizontal);
