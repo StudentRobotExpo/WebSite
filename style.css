@@ -109,13 +109,13 @@ footer p {
   align-items: flex-end;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .text-menu {
     display: none;
   }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1201px) {
   .hamburger-menu {
     display: none;
   }
@@ -338,7 +338,7 @@ footer p {
 
 /* 開催概要 */
 .outline {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: var(--spacing-section);
 }
@@ -362,12 +362,13 @@ footer p {
   font-size: clamp(16px, 2vw, 18px);
   color: var(--color-black);
   line-height: 1.8;
+  font-weight: 500;
 }
 
 .outline .context {
   background: var(--color-white);
   border-radius: 16px;
-  padding: 40px;
+  padding: 20px;
   margin-bottom: 40px;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -382,6 +383,22 @@ footer p {
   bottom: 0;
   width: 5px;
   background: var(--gradient-vertical);
+}
+
+/* スケジュール：横幅が十分なときは2日分を横並び */
+@media (min-width: 1001px) {
+  .outline.schedule-outline {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    align-items: start;
+  }
+
+  .outline.schedule-outline .context {
+    margin-bottom: 0;
+    height: 100%;
+  }
 }
 
 .context .heading {
@@ -401,6 +418,7 @@ footer p {
 .context .list li {
   font-size: clamp(16px, 2vw, 18px);
   color: var(--color-gray);
+  font-weight: 500;
   padding: 15px 20px 15px 40px;
   margin-bottom: 10px;
   background: var(--gradient-fade);
@@ -431,12 +449,25 @@ footer p {
   font-weight: 700;
   color: var(--color-white);
   margin-bottom: 20px;
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 -1px 0 rgba(0, 0, 0, 0.35),
+    1px 0 0 rgba(0, 0, 0, 0.35),
+    -1px 0 0 rgba(0, 0, 0, 0.35),
+    0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .welcome .text {
   font-size: clamp(16px, 2vw, 20px);
   color: var(--color-white);
   line-height: 1.8;
+  font-weight: 700;
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.3),
+    0 -1px 0 rgba(0, 0, 0, 0.3),
+    1px 0 0 rgba(0, 0, 0, 0.3),
+    -1px 0 0 rgba(0, 0, 0, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* アクセスページ */
@@ -464,8 +495,11 @@ footer p {
   border-image-slice: 1;
 }
 
-.venue .venue-name {
+.access .venue .venue-name {
   font-size: clamp(24px, 3vw, 32px);
+}
+
+.venue-name {
   font-weight: 700;
   margin-bottom: 15px;
   color: var(--color-black);
@@ -474,15 +508,15 @@ footer p {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-.venue .venue-name:hover {
+.venue-name:hover {
   transform: translateY(-3px);
   color: var(--color-primary-blue);
 }
 
-.venue .venue-name:hover::after {
+.venue-name:hover::after {
   opacity: 1;
   transform: rotate(15deg);
 }
@@ -523,7 +557,7 @@ footer p {
   color: #606060;
 }
 
-.access .access-map {
+.access-map {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);

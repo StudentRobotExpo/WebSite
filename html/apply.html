@@ -3,7 +3,7 @@
 	<head>
 		<meta charset = "utf-8">
 		<meta name = "description" content = "学生主体のロボット交流会のホームページです。">
-		<title>参加団体 | 学生ロボットEXPO</title>
+		<title>参加申し込み | 学生ロボットEXPO</title>
     <link rel = "icon" href = "../images/icon.png" type = "image/png">
 		<link rel = "icon" href = "../images/icon.ico" type = "image/x-icon">
 		<link rel = "stylesheet" href = "../style.css">
@@ -49,13 +49,69 @@
 			</div>
 		</header>
 
-    <div class="page-title">参加団体</div>
+    <div class="page-title">参加申し込み</div>
 
     <div style="padding: 200px 20px; text-align: center;">
         <div>
             <h1>Coming Soon</h1>
         </div>
     </div>
+
+		<!-- <div class="outline">
+			<section class="intro">
+				<div class="title">チーム参加者の事前登録</div>
+				<p class="text">チーム参加者はGoogleフォームから事前登録が必要です。一般参加者は当日参加できます。</p>
+			</section>
+
+			<section class="context">
+				<div class="heading"><a id="formLink" class="venue-name" href="#" target="_blank" rel="noopener noreferrer">Googleフォームを別のタブで開く</a></div>
+
+				<div class="access-map">
+					<iframe
+						id="formEmbed"
+						src=""
+						width="100%"
+						height="1200"
+						style="border:0;"
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+			</section>
+		</div>
+
+		<script>
+			const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeQckEmJUstyDRajpcMBqw2VSJd6RsY7q2c_Xd4Mb-ckZZKPg/viewform?usp=dialog";
+
+			function toEmbedUrl(rawUrl) {
+				if (!rawUrl) return "";
+				try {
+					const url = new URL(rawUrl);
+					if (!url.searchParams.has("embedded")) {
+						url.searchParams.set("embedded", "true");
+					}
+					return url.toString();
+				} catch (e) {
+					return rawUrl;
+				}
+			}
+
+			(function initForm() {
+				const linkEl = document.getElementById("formLink");
+				const iframeEl = document.getElementById("formEmbed");
+
+				if (!FORM_URL) {
+					linkEl.textContent = "フォームURL準備中";
+					linkEl.removeAttribute("href");
+					iframeEl.setAttribute("title", "申込フォーム（準備中）");
+					return;
+				}
+
+				linkEl.href = FORM_URL;
+				iframeEl.src = toEmbedUrl(FORM_URL);
+				iframeEl.setAttribute("title", "申込フォーム");
+			})();
+		</script> -->
 
     <footer>
       <div class="footer-content">
