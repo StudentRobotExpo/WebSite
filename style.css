@@ -70,6 +70,49 @@ footer {
   padding: 20px 0;
 }
 
+footer .footer-sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0 18px;
+}
+
+footer .footer-sponsors-title {
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  color: var(--color-white);
+  opacity: 0.75;
+}
+
+footer .footer-sponsors-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px 28px;
+  padding: 0 20px;
+}
+
+footer .footer-sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+footer .footer-sponsor img {
+  height: 128px;
+  width: auto;
+  opacity: 0.85;
+}
+
+footer .footer-sponsors-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 18px;
+}
+
 footer .footer-content {
   margin-bottom: 10px;
   display: flex;
