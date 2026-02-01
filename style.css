@@ -183,6 +183,10 @@ footer .diver-x-logo {
   footer .diver-x-logo {
     height: 40px !important;
   }
+
+  footer .footer-supported-by img {
+    height: 40px;
+  }
 }
 
 footer .footer-content {
