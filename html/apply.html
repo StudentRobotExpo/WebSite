@@ -4,7 +4,7 @@
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 		<meta name = "description" content = "学生主体のロボット交流会のホームページです。">
-		<title>参加申し込み | 学生ロボットEXPO</title>
+		<title>参加申込み | 学生ロボットEXPO</title>
     <link rel = "icon" href = "../images/icon.png" type = "image/png">
 		<link rel = "icon" href = "../images/icon.ico" type = "image/x-icon">
 		<link rel = "stylesheet" href = "../style.css">
@@ -50,7 +50,7 @@
 			</div>
 		</header>
 
-    <div class="page-title">参加申し込み</div>
+    <div class="page-title">参加申込み</div>
 
 		<div class="outline">
 			<section class="intro">
@@ -104,13 +104,13 @@
 				if (!FORM_URL) {
 					linkEl.textContent = "フォームURL準備中";
 					linkEl.removeAttribute("href");
-					iframeEl.setAttribute("title", "申込フォーム（準備中）");
+					iframeEl.setAttribute("title", "申込みフォーム（準備中）");
 					return;
 				}
 
 				linkEl.href = FORM_URL;
 				iframeEl.src = toEmbedUrl(FORM_URL);
-				iframeEl.setAttribute("title", "申込フォーム");
+				iframeEl.setAttribute("title", "申込みフォーム");
 			})();
 		</script> -->
 

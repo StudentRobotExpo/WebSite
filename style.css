@@ -82,7 +82,6 @@ footer .footer-sponsors-title {
   font-size: 18px;
   letter-spacing: 0.24em;
   color: var(--color-white);
-  opacity: 0.75;
 }
 
 footer .footer-sponsors-logos {
@@ -121,21 +120,18 @@ footer .footer-sponsor img {
   height: 100px;
   width: auto;
   aspect-ratio: auto;
-  opacity: 0.85;
 }
 
 footer .footer-supported-by {
   font-size: 10px;
   letter-spacing: 0.2em;
   color: var(--color-white);
-  opacity: 0.6;
 }
 
 footer .footer-supported-by img {
   height: 80px;
   width: auto;
   aspect-ratio: auto;
-  opacity: 1;
 }
 
 footer .footer-sponsors-divider {
@@ -243,13 +239,13 @@ footer p {
   align-items: flex-end;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1280px) {
   .text-menu {
     display: none;
   }
 }
 
-@media (min-width: 1501px) {
+@media (min-width: 1281px) {
   .hamburger-menu {
     display: none;
   }
@@ -409,7 +405,7 @@ footer p {
 .hero-left {
   position: absolute;
   left: var(--spacing-page-horizontal);
-  top: 40%;
+  top: 32%;
   z-index: 2;
   text-align: center;
   width: 460px;
@@ -427,7 +423,8 @@ footer p {
 }
 
 .hero-trust-item {
-  background: rgba(255, 255, 255, 0.5);
+  font-size: clamp(20px, 3.2vh, 36px);
+  background: rgba(224, 224, 224, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 32px;
   padding: 16px 18px;
@@ -445,10 +442,16 @@ footer p {
 }
 
 .hero-trust-main {
-  font-size: clamp(20px, 3.2vh, 36px);
   font-weight: 800;
   line-height: 1;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+.hero-picture {
+  width: auto;
+  height: 1em;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-trust-sub {
@@ -484,7 +487,7 @@ footer p {
 
 .hero-badge {
   position: relative;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(224, 224, 224, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 999px;
   padding: 12px 16px 10px;
@@ -514,7 +517,7 @@ footer p {
   width: clamp(300px, 50vh, 1000px);
   height: clamp(450px, 70vh, 1500px);
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(224, 224, 224, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 32px;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
@@ -559,7 +562,7 @@ footer p {
 }
 
 .hero-card-access {
-  font-size: clamp(12px, 2vh, 40px);
+  font-size: clamp(12pxwelcome, 2vh, 40px);
   margin-top: 5px;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
@@ -717,7 +720,7 @@ footer p {
 }
 
 .welcome .title {
-  font-size: clamp(24px, 3vw, 30px);
+  font-size: clamp(32px, 4vw, 40px);
   font-weight: 700;
   color: var(--color-white);
   margin-bottom: 20px;
@@ -730,7 +733,7 @@ footer p {
 }
 
 .welcome .text {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(24px, 3vw, 30px);
   color: var(--color-white);
   line-height: 1.8;
   font-weight: 700;
@@ -781,6 +784,12 @@ footer p {
   align-items: center;
   gap: 10px;
   text-decoration: underline;
+  text-shadow:
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(0, 0, 0, 0);
 }
 
 .venue-name:hover {
@@ -1030,7 +1039,7 @@ footer p {
 
   .hero-left {
     position: absolute;
-    top: 5%;
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
     padding: 0;
@@ -1042,7 +1051,7 @@ footer p {
 
   .hero-card {
     position: absolute;
-    top: 58%;
+    top: 60%;
     left: 50%;
     right: auto;
     transform: translate(-50%, -50%);
@@ -1055,7 +1064,7 @@ footer p {
 
   .hero-trust {
     position: absolute;
-    top: 88%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: calc(60% + 40px);
@@ -1123,7 +1132,7 @@ footer p {
 
   .hero-left {
     position: absolute;
-    top: 7%;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     padding: 0;
@@ -1164,7 +1173,7 @@ footer p {
 
   .hero-card {
     position: absolute;
-    top: 58%;
+    top: 59%;
     left: 50%;
     right: auto;
     transform: translate(-50%, -50%);
