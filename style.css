@@ -414,7 +414,7 @@ footer p {
 .hero-trust {
   position: absolute;
   left: var(--spacing-page-horizontal);
-  top: 55%;
+  top: 60%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
@@ -1144,7 +1144,7 @@ footer p {
 
   .hero-trust {
     position: absolute;
-    top: 86%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: calc(60% + 40px);
@@ -1173,7 +1173,7 @@ footer p {
 
   .hero-card {
     position: absolute;
-    top: 59%;
+    top: 62%;
     left: 50%;
     right: auto;
     transform: translate(-50%, -50%);
